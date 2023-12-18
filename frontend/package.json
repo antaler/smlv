@@ -1,0 +1,44 @@
+{
+  "name": "smlv-web",
+  "version": "0.0.1",
+  "description": "Smartlive Web",
+  "main": "index.js",
+  "scripts": {
+    "co": "sui-mono commit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "webs/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/antaler/smlv-web.git"
+  },
+  "keywords": [
+    "web",
+    "react",
+    "spa",
+    "smlv"
+  ],
+  "author": "antaler",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://gitlab.com/antaler/smlv-web/issues"
+  },
+  "homepage": "https://gitlab.com/antaler/smlv-web#readme",
+  "devDependencies": {
+    "@fastify/cors": "^8.4.1",
+    "@s-ui/mono": "^2.41.0",
+    "bun": "^1.0.11",
+    "concurrently": "^8.2.2",
+    "fastify": "^4.24.3",
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "react-toastify": "^9.1.3"
+  }
+}
