@@ -37,8 +37,5 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
-  },
-  "dependencies": {
-    "react-toastify": "^9.1.3"
   }
 }
