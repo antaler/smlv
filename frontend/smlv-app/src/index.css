@@ -1,3 +1,16 @@
+@import url("./font.geist.css");
+@import url("./keyframes.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+    background-color: #41405fe0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
