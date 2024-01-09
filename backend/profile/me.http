@@ -1,0 +1,26 @@
+
+# Get data about me
+GET http://localhost:8080/v1/user/me
+Authorization: token {{$dotenv TOKEN}}
+
+###
+
+# Updated me
+PATCH http://localhost:8080/v1/user/me
+Authorization: token {{$dotenv TOKEN}}
+Content-Type: application/json
+
+{
+    "gender":"W",
+    "sql": "SELECT * FROM users",
+    "height": 182,
+    "weight": 90,
+    "birthDay": "09/04/1998",
+    "gender": "M"
+}
+
+###
+
+# Delete me
+DELETE http://localhost:8080/v1/user/me
+Authorization: token {{$dotenv TOKEN}}
