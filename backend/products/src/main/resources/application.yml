@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: products   
+  data:
+    mongodb:
+      uri: ${env.spring.data.mongodb.uri}
+      database: ${env.spring.data.mongodb.database}
+  kafka:
+    bootstrap-servers: ${env.bootstrap.servers}
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: SCRAM-SHA-256
+      sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="${KAFKA_USER}" password="${KAFKA_PASS}";
+
+  config:
+    activate:
+      on-profile:
+      - local
+    import: "optional:configservice:"
+  cloud:
+    config:
+      enabled: false
+
+
+smlv-app:
+  external-services:
+    open-food: https://world.openfoodfacts.net/api/v3/product/_BARCODE_?cc=es&lc=es&fields=product_name%2Ccarbohydrates_100g%2Cenergy-kcal_100g%2Cfat_100g%2Cproteins_100g%2Csalt_100g%2Csaturated-fat_100g%2Csugars_100g
+  redirects:
+    product-barcode-not-found: http://localhost:8080/v1/products/manually/add
