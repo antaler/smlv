@@ -1,0 +1,24 @@
+{
+  "name": "secure-user",
+  "version": "0.0.1",
+  "private": "true",
+  "type": "module",
+  "description": "User validation and smlv user token",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "JWT",
+    "node"
+  ],
+  "author": {
+    "email": "dev@antaler.com",
+    "name": "antaler",
+    "url": "https://antaler.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
