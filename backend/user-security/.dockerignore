@@ -1,0 +1,8 @@
+.env
+.env.local
+docker-compose.yml
+*.http
+node_modules/
+*.sql
+*.pem
+.local_mysql-data/
