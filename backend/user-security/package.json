@@ -1,0 +1,39 @@
+{
+  "name": "secure-user",
+  "version": "0.0.1",
+  "private": "true",
+  "type": "module",
+  "description": "User validation and smlv user token",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --env-file=.env.local src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "JWT",
+    "node"
+  ],
+  "author": {
+    "email": "dev@antaler.com",
+    "name": "antaler",
+    "url": "https://antaler.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "1.20.2",
+    "cors": "^2.8.5",
+    "express": "4.19.2",
+    "jsonwebtoken": "9.0.2",
+    "morgan": "1.10.0",
+    "mysql2": "3.10.0",
+    "nodemailer": "^6.9.13",
+    "sequelize": "6.37.3"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}

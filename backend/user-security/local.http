@@ -1,0 +1,99 @@
+@baseUrl = http://localhost:8090
+
+# @name Health_Check
+GET {{baseUrl}}/health-check HTTP/1.1
+
+###
+# @name Public-Key
+GET {{baseUrl}}/public-key HTTP/1.1
+
+###
+
+# Login
+
+# @name refresh_token
+GET {{baseUrl}}/login/refresh HTTP/1.1
+
+###
+
+# @name sign_up
+POST {{baseUrl}}/login/sign-up HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "email",
+    "password": "pass"
+}
+
+###
+# @name email_verification
+POST {{baseUrl}}/login/sing-up/verification HTTP/1.1
+Content-Type: application/json
+
+{
+    "confirmationToken":  "tokenConfirmation"
+}
+
+###
+# @name sign_in
+POST {{baseUrl}}/login/sign-in HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "",
+    "password": ""
+}
+
+
+###
+# @name otp_verification
+POST {{baseUrl}}/login/sign-in/otp HTTP/1.1
+Content-Type: application/json
+
+{
+    "otpId": "",
+    "otp": ""
+}
+
+
+# USER
+
+
+###
+# @name user_health_data
+
+POST {{baseUrl}}/user/health HTTP/1.1
+Content-Type: application/json
+
+{
+    "heigth": 170,
+    "weigth": 89.4,
+    "birthDate": "MM/dd/yy",
+    "gender": "M", 
+}
+
+###
+# @name user_health_data
+GET {{baseUrl}}/user/health HTTP/1.1
+
+
+###
+# @name update_user_health_data
+
+PATCH {{baseUrl}}/user/health HTTP/1.1
+Content-Type: application/json
+
+{
+    "heigth": 170,
+    "weigth": 89.4,
+    "birthDate": "MM/dd/yy",
+    "gender": "M", 
+}
+
+###
+# @name delete_account
+DELETE {{baseUrl}}/user?userId=XXXXX HTTP/1.1
+
+###
+# @name calculate_user_health_data
+GET {{baseUrl}}/user/health?calculate=imc,calories&only-calculated HTTP/1.1
